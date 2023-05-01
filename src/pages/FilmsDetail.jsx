@@ -62,24 +62,15 @@ export default function FilmsDetail() {
     <div>
       <>
         <div className="wrapper">
-          <div className="">
+          <div className="bg-darkBlack">
             {episodes?.map((item, index) => {
               if (index === selectedEpisode) {
                 return (
                   <ReactPlayer
                     key={index}
-                    className="w-full mx-auto"
+                    className="w-7 mx-auto"
                     url={item?.episode_link}
-                    width={"50%"}
                     style={{ aspectRatio: "3/4" }}
-                    light={
-                      <div className="">
-                        <img
-                          className="w-[600px] h-[360px] object-cover mx-auto"
-                          src={item.thumbnail}
-                        />
-                      </div>
-                    }
                   />
                 );
               } else {
@@ -138,7 +129,7 @@ export default function FilmsDetail() {
                               id={`slide${index}`}
                               className={`carousel-item relative w-full`}
                             >
-                              <ReactPlayer url={item?.episode_link} className="carousel-video w-full h-[16em] rounded-sm" light={true} />
+                              <ReactPlayer url={item?.episode_link} className="carousel-video w-[500px] h-[16em] rounded-sm" light={true} />
                               <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-14 top-1/2">
                                 {index > 0 && (
                                   <a
