@@ -11,7 +11,7 @@ export function PrivateRouteLogin() {
     return <Outlet />
 }
 
-export function PrivateRouteUser() {
+export function PrivateRouteAdmin() {
     const [state] = useContext(UserContext);
 
     if (state.user.role === "admin") {
@@ -20,7 +20,7 @@ export function PrivateRouteUser() {
     return <Outlet />
 }
 
-export function PrivateRouteAdmin() {
+export function PrivateRouteUser() {
     const [state] = useContext(UserContext);
 
     if (state.user.role !== "admin") {
