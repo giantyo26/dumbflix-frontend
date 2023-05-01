@@ -1,6 +1,15 @@
 import { UserContext } from "../context/UserContext.jsx";
 import { useContext, useEffect, useState } from "react";
 import Swal from "sweetalert2";
+import IconProfile from "../assets/image/icon-profile.png"
+import IconEmail from "../assets/image/icon-email.png"
+import IconStatus from "../assets/image/icon-status.png"
+import IconGender from "../assets/image/icon-gender.png"
+import IconPhone from "../assets/image/icon-phone.png"
+import IconAddress from "../assets/image/icon-address.png"
+
+
+
 
 // Import API Config
 import { API } from "../config/api";
@@ -33,42 +42,42 @@ export default function UserProfile() {
         <div className="flex flex-col ml-10 gap-3">
           <h1 className="text-xl pt-7 ml-1">Personal Info</h1>
           <div className="name flex items-center gap-3">
-            <img src="../public/image/icon-profile.png" />
+            <img src={IconProfile} />
             <div className="flex flex-col">
               <p>{profile.fullname}</p>
               <span className="opacity-70 text-sm">Full Name</span>
             </div>
           </div>
           <div className="email flex items-center gap-3">
-            <img src="../public/image/icon-email.png" />
+            <img src={IconEmail} />
             <div className="flex flex-col">
               <p>{profile.email}</p>
               <p className="opacity-70 text-sm">Email</p>
             </div>
           </div>
           <div className="status flex items-center gap-2">
-            <img src="../public/image/icon-status.png" />
+            <img src={IconStatus} />
             <div>
               <p>Active</p>
               <p className="opacity-70 text-sm">Status</p>
             </div>
           </div>
           <div className="gender flex items-center gap-3">
-            <img src="../public/image/icon-gender.png" />
+            <img src={IconGender} />
             <div>
               <p>{profile.gender}</p>
               <p className="opacity-70 text-sm">Gender</p>
             </div>
           </div>
           <div className="phone flex items-center gap-3">
-            <img src="../public/image/icon-phone.png" />
+            <img src={IconPhone} />
             <div>
               <p>{profile.phone}</p>
               <p className="opacity-70 text-sm">Phone</p>
             </div>
           </div>
           <div className="address flex items-center gap-4">
-            <img src="../public/image/icon-address.png" />
+            <img src={IconAddress} />
             <div>
               <p>{profile.address}</p>
               <p className="opacity-70 text-sm">Address</p>

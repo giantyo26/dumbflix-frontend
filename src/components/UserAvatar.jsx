@@ -1,6 +1,10 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
+import Profile from "../assets/image/profile.png";
+import PayIcon from "../assets/image/pay.png";
+import Line from "../assets/image/Line.png"
+import Logout from "../assets/image/logout.png"
 // Define UserAvatar component that takes props
 export default function UserAvatar() {
   // Using state to keep track dropdown menu 
@@ -41,23 +45,23 @@ export default function UserAvatar() {
         >
           <Link to={"/user-profile"}>
             <div className="flex ml-4 my-3 items-center">
-              <img src="../public/image/profile.png" />
+              <img src={Profile} />
               <h1>Profile</h1>
             </div>
           </Link>
           <Link to={"/user-payment"}>
             <div className="flex ml-4 my-3 items-center">
-              <img src="../public/image/pay.png" />
+              <img src={PayIcon} />
               <h1>Pay</h1>
             </div>
           </Link>
 
           <div className="flex my-3 items-center">
-            <img src="../public/image/line.png" className="w-160" />
+            <img src={Line} className="w-160" />
           </div>
 
           <button className="flex ml-4 my-3 mt-4" onClick={()=>logout()}>
-            <img src="../public/image/logout.png" />
+            <img src={Logout} />
             <h1 >Logout</h1>
           </button>
         </div>

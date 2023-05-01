@@ -5,7 +5,7 @@ import UserAvatar from "./UserAvatar";
 import AdminAvatar from "./AdminAvatar"
 import { useContext } from "react";
 import { UserContext } from "../context/UserContext";
-
+import Logo from "../assets/image/logo.png"
 
 
 export default function Navbar() {
@@ -23,7 +23,7 @@ export default function Navbar() {
 
 
                 <div className="mr-30 flex ">
-                    <Link to={"/"} className="mx-auto"><a className="nav-logo " href=""><img className="logo mx-auto " src="/image/logo.png" alt="logo" /></a></Link>
+                    <Link to={"/"} className="mx-auto"><a className="nav-logo " href=""><img className="logo mx-auto " src={Logo} alt="logo" /></a></Link>
                 </div>
                 <div className="nav-item-2 md:flex space-x-7">
                     { state.isLogin ? 

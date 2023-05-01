@@ -1,6 +1,9 @@
 import { useQuery } from "react-query";
 import { Link } from "react-router-dom";
 import { API } from "../config/api";
+import HeroJoker from "../assets/image/hero-joker.webp"
+import TitleJoker from "../assets/image/title-joker.png"
+
 
 export default function Movies() {
   const { data: films } = useQuery("filmsCache", async () => {
@@ -14,13 +17,13 @@ export default function Movies() {
     <>
       <div className="relative">
         <img
-          src="public/image/hero-joker.webp"
+          src={HeroJoker}
           className="object-cover w-full h-[600px]"
           alt="The Joker Cover"
         />
         <div className="hero-image bg-black">
           <div className="hero-text absolute top-40 left-[100px]">
-            <img src="image/title-joker.png" alt="The Joker title" />
+            <img src={TitleJoker} alt="The Joker title" />
             <p className="text-xl mt-4 ml-3 ">
               In Gotham City, mentally troubled comedian Arthur Fleck is
               disregarded <br /> and mistreated by society. He then embarks on a

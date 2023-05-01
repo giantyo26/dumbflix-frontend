@@ -1,7 +1,7 @@
 import {React,  useState}  from "react";
 import { useMutation } from "react-query";
 import { API } from "../config/api";
-
+import Swal from "sweetalert2";
 export default function Register() {
     // UseState for showing register Modal
     const [showRegister, setShowRegister] = useState(false);
@@ -40,7 +40,11 @@ export default function Register() {
             
           console.log("register success : ", response)
 
-          alert("Succesfully Registered!")
+          Swal.fire(
+            'Success!',
+            'You have successfully Registered!',
+            'success'
+        )
           setShowRegister(false);    
     
           setRegisterValue({
@@ -51,6 +55,7 @@ export default function Register() {
             phone: "",
             address: "",
           })
+
     
         } catch (error) {
           alert("Register Failed!")

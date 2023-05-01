@@ -1,4 +1,4 @@
-import triangle from "../../public/image/triangle.png";
+import triangle from "../assets/image/triangle.png";
 
 import { useQuery } from "react-query";
 import { API } from "../config/api";
