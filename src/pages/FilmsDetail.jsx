@@ -129,7 +129,7 @@ export default function FilmsDetail() {
                               id={`slide${index}`}
                               className={`carousel-item relative w-full`}
                             >
-                              <ReactPlayer url={item?.episode_link} className="carousel-video w-[500px] h-[16em] rounded-sm" light={true} />
+                              <ReactPlayer url={item?.episode_link} width="50%" className="carousel-video h-[16em] rounded-sm" light={true} />
                               <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-14 top-1/2">
                                 {index > 0 && (
                                   <a
