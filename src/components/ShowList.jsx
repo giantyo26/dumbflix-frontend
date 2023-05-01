@@ -19,7 +19,7 @@ export default function ShowList() {
                     {categoryFilmsSeries?.length !== 0 ? (
                         <>
                             {categoryFilmsSeries?.map((item) => (
-                                <Link to={`films-detail/${item.id}`} key={item.id} className="p-2 w-[15%]">
+                                <Link to={`films-detail/${item.id}`} key={item.id} className="p-3 w-[15%]">
                                     <div className="series-card">
                                         <img src={item.thumbnail} className="w-full h-auto" alt="series thumbnail" />
                                         <p className="text-lg mt-2">{item.title}</p>
@@ -37,7 +37,7 @@ export default function ShowList() {
                     {categoryFilmsMovies?.length !== 0 ? (
                         <>
                             {categoryFilmsMovies?.map((item) => (
-                                <Link to={`films-detail/${item.id}`} key={item.id} className="p-2 w-[15%]">
+                                <Link to={`films-detail/${item.id}`} key={item.id} className="p-3 w-[15%]">
                                     <div className="movies-card">
                                         <img src={item.thumbnail} className="w-full h-auto" alt="movie thumbnail" />
                                         <p className="text-lg mt-2">{item.title}</p>
