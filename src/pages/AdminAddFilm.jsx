@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useQuery, useMutation } from "react-query";
 import { API } from "../config/api";
+import Swal from "sweetalert2";
 
 export default function AdminAddFilm() {
     const navigate = useNavigate()
