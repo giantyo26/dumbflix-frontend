@@ -62,15 +62,24 @@ export default function FilmsDetail() {
     <div>
       <>
         <div className="wrapper">
-          <div className="bg-darkBlack">
+          <div className="">
             {episodes?.map((item, index) => {
               if (index === selectedEpisode) {
                 return (
                   <ReactPlayer
                     key={index}
-                    className="w-7 mx-auto"
+                    className="w-full mx-auto"
                     url={item?.episode_link}
+                    width={"50%"}
                     style={{ aspectRatio: "3/4" }}
+                    light={
+                      <div className="">
+                        <img
+                          className="w-[600px] h-[360px] object-cover mx-auto"
+                          src={item.thumbnail}
+                        />
+                      </div>
+                    }
                   />
                 );
               } else {
@@ -94,7 +103,7 @@ export default function FilmsDetail() {
                 <AddEpisode idFilm={films?.id} />
               </div>
               <div className="flex justify-between">
-                <div className="card card-side py-16 pt-4 pl-16" key="">
+                <div className="card card-side py-16 pt-0 pl-16" key="">
                   <div className="w-[250px]">
                     <img src={films?.thumbnail} className="w-[300px]" />
                   </div>
@@ -116,6 +125,7 @@ export default function FilmsDetail() {
 
                 
                 <div className="carousel ">
+                 
                   {episodes?.map((item, index) => {
                     if (index === selectedEpisode) {
                       return (
@@ -127,9 +137,12 @@ export default function FilmsDetail() {
                             <div
                               key={index}
                               id={`slide${index}`}
-                              className={`carousel-item relative w-full`}
+                              className={`carousel-item w-[550px] relative`}
                             >
-                              <ReactPlayer url={item?.episode_link} className="carousel-video w-[13em] h-[16em] rounded-sm" light={true} />
+                              <img
+                                src={item.thumbnail}
+                                className="w-[500px] h-[16em] rounded-md"
+                              />
                               <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-14 top-1/2">
                                 {index > 0 && (
                                   <a
