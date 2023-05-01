@@ -5,6 +5,8 @@ import Profile from "../assets/image/profile.png";
 import PayIcon from "../assets/image/pay.png";
 import Line from "../assets/image/Line.png"
 import Logout from "../assets/image/logout.png"
+import AvatarIcon from "../assets/image/joker.png"
+
 // Define UserAvatar component that takes props
 export default function UserAvatar() {
   // Using state to keep track dropdown menu 
@@ -30,7 +32,7 @@ export default function UserAvatar() {
       {/* Avatar Icon */}
       <div className="relative mr-10 mt-50 rounded-full shadow-md cursor-pointer">
         <img
-          src="../public/thumbnail/joker.png"
+          src={AvatarIcon}
           className="rounded-full object-cover h-[50px] w-[50px] border-white border-2"
           alt="avatar icon"
         />

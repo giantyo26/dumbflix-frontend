@@ -4,6 +4,7 @@ import FilmIcon from "../assets/image/film-icon.png";
 import PayIcon from "../assets/image/pay.png";
 import Line from "../assets/image/Line.png"
 import Logout from "../assets/image/logout.png"
+import AvatarIcon from "../assets/image/chernobyl.png"
 
 export default function AdminAvatar() {
     // Using state to keep track dropdown menu
@@ -30,7 +31,7 @@ export default function AdminAvatar() {
         {/* Avatar Icon */}
         <div className="relative mr-10 mt-50 rounded-full shadow-md cursor-pointer">
           <img
-            src="../assets/thumbnail/chernobyl.png"
+            src={AvatarIcon}
             className="rounded-full object-cover h-[50px] w-[50px] border-white border-2"
             alt="avatar icon"
           />
