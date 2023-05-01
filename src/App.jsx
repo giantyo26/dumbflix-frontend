@@ -83,10 +83,10 @@ function App() {
               <Route path="/movies" element={<Movies />} />
               <Route path="/films-detail/:id" element={<FilmsDetail />} />
 
-              <Route element={<PrivateRouteUser />}>
+              
                 <Route path="/user-profile" element={<UserProfile />} />
                 <Route path="/user-payment" element={<UserPayment />} />
-              </Route>
+              
               <Route element={<PrivateRouteAdmin />}>
                 <Route path="/admin-list-film" element={<AdminListFilm />} />
                 <Route path="/admin-transaction" element={<Transaction />} />
