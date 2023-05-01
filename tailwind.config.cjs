@@ -1,0 +1,24 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    screens:{
+      sm: '480px',
+      md: '768px',
+      lg: '976px',
+      xl: '1440px'
+    },
+    extend: {
+      colors: {
+        darkRed: '#E50914',
+        darkBlack: '#1F1F1F',
+        darkGrey: 'rgba(210, 210, 210, 0.25)'
+        
+      }
+    },
+  },
+  plugins: [require("daisyui")],
+}
