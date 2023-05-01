@@ -1,8 +1,8 @@
 import { useQuery } from "react-query";
 import { Link } from "react-router-dom";
 import { API } from "../config/api";
-import LacasaTitle from "../image/title-lacasa-de-papel.png"
-import LacasaHero from "../image/hero-lacasa.webp"
+import LacasaTitle from "..assets/image/title-lacasa-de-papel.png"
+import LacasaHero from "..assets/image/hero-lacasa.webp"
 
 export default function Series() {
   const { data: films } = useQuery("filmsCache", async () => {
