@@ -79,20 +79,18 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="*" element={<PageNotFound />} />
             <Route element={<PrivateRouteLogin />}>
+              <Route path="/series" element={<Series />} />
+              <Route path="/movies" element={<Movies />} />
+              <Route path="/films-detail/:id" element={<FilmsDetail />} />
+
               <Route element={<PrivateRouteUser />}>
-                <Route path="/series" element={<Series />} />
-                <Route path="/movies" element={<Movies />} />
                 <Route path="/user-profile" element={<UserProfile />} />
                 <Route path="/user-payment" element={<UserPayment />} />
-                <Route path="/films-detail/:id" element={<FilmsDetail />} />
               </Route>
               <Route element={<PrivateRouteAdmin />}>
-                <Route path="/series" element={<Series />} />
-                <Route path="/movies" element={<Movies />} />
                 <Route path="/admin-list-film" element={<AdminListFilm />} />
                 <Route path="/admin-transaction" element={<Transaction />} />
                 <Route path="/admin-add-film" element={<AdminAddFilm />} />
-                <Route path="/films-detail/:id" element={<FilmsDetail />} />
                 <Route
                   exact
                   path="/admin-edit-film/:id"
