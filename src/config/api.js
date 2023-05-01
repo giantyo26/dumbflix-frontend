@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // Create base URL API
 export const API = axios.create({
-  baseURL:'import.meta.env.VITE_REACT_APP_BASE_URL',
+  baseURL:'import.meta.env.VITE_BASE_API_URL',
 });
 
 // Set Authorization Token Header
