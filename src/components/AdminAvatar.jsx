@@ -15,8 +15,7 @@ export default function AdminAvatar() {
     const logout = () => {
       localStorage.removeItem("token");
   
-      //Reload Page
-      window.location.reload();
+
   
       navigate("/");
     };

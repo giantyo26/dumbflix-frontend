@@ -17,8 +17,6 @@ export default function UserAvatar() {
   const logout = () => {
     localStorage.removeItem("token");
 
-    //Reload Page
-    window.location.reload();
 
     navigate("/");
   };
