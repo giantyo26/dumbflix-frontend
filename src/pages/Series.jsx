@@ -1,6 +1,8 @@
 import { useQuery } from "react-query";
 import { Link } from "react-router-dom";
 import { API } from "../config/api";
+import LacasaTitle from "../image/title-lacasa-de-papel.png"
+import LacasaHero from "../image/hero-lacasa.webp"
 
 export default function Series() {
   const { data: films } = useQuery("filmsCache", async () => {
@@ -13,14 +15,14 @@ export default function Series() {
     <>
       <div className="relative">
         <img
-          src="public/image/hero-lacasa.webp"
+          src={LacasaHero}
           className="object-cover w-full h-[600px] bg-darkBlack"
           alt="La Casa De Papel Cover"
         />
         <div className="hero-image bg-black">
           <div className="hero-text absolute top-40 left-[100px]">
             <img
-              src="image/title-lacasa-de-papel.png"
+              src={LacasaTitle}
               alt="La Casa De Papel title"
             />
             <p className="text-xl mt-4 ml-3 ">
