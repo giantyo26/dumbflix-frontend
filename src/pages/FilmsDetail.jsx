@@ -9,8 +9,10 @@ import EditEpisode from "../components/EditEpisode";
 import { UserContext } from "../context/UserContext";
 import { MdEdit } from "react-icons/md";
 import { MdDelete } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
 
 export default function FilmsDetail() {
+  const navigate = useNavigate()
   const { id } = useParams();
   const [state] = useContext(UserContext);
   const [selectedEpisode, setSelectedEpisode] = useState(0);
@@ -20,7 +22,7 @@ export default function FilmsDetail() {
     setIdDelete(idEpisode);
     Swal.fire(
       "Success!",
-      "You have successfully Updated the film!",
+      "You have successfully Deleted the film!",
       "success"
     ).then((result) => {
       if (result.isConfirmed) {
