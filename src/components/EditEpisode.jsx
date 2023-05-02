@@ -17,10 +17,7 @@ const EditEpisode = ({ idFilm, idEpisode }) => {
       [e.target.name]: e.target.type === "file" ? e.target.files : e.target.value,
     });
 
-    // Create thumbnail url for preview
-    if (e.target.type === "file") {
-      let url = URL.createObjectURL(e.target.files[0]);
-    }
+    
   };
 
   useEffect(() => {
@@ -64,8 +61,6 @@ const EditEpisode = ({ idFilm, idEpisode }) => {
       // Updates Episode Data
       const response = await API.patch("/episodes/" + idEpisode, formData, config);
       console.log("Update Episode Success : ", response);
-
-      window.location.reload()
     } catch (err) {
       console.log("Update Episode Failed : ", err);
     }
