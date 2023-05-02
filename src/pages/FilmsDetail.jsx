@@ -18,6 +18,15 @@ export default function FilmsDetail() {
 
   function handleDeleteEp(idEpisode) {
     setIdDelete(idEpisode);
+    Swal.fire(
+      "Success!",
+      "You have successfully Updated the film!",
+      "success"
+    ).then((result) => {
+      if (result.isConfirmed) {
+        navigate("/admin-list-film");
+      }
+    });
   }
   // execute the deleteById function whenever the value of idDelete changes
   useEffect(() => {

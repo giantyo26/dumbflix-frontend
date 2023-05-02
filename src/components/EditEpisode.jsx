@@ -61,6 +61,15 @@ const EditEpisode = ({ idFilm, idEpisode }) => {
       // Updates Episode Data
       const response = await API.patch("/episodes/" + idEpisode, formData, config);
       console.log("Update Episode Success : ", response);
+      Swal.fire(
+        "Success!",
+        "You have successfully Updated the episode!",
+        "success"
+      ).then((result) => {
+        if (result.isConfirmed) {
+          navigate("/admin-list-film");
+        }
+      });
     } catch (err) {
       console.log("Update Episode Failed : ", err);
     }
