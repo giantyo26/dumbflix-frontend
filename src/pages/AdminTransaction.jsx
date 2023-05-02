@@ -36,11 +36,9 @@ export default function Transaction() {
                                 {item.price == "80000" && <td className="text-white p-3 text-center">3 Month</td>}
                                 {item.price == "150000" && <td className="text-white p-3 text-center">6 Month</td>}
 
-                                {item.user.subscribe == "active" && <td className="text-green-500 p-3 text-center">Active</td>}
-                                {item.user.subscribe == "" && <td className="text-red-500 p-3 text-center">Non Active</td>}
+                                <td className="text-blue-500 p-3 text-center">{item.user.subscribe}</td>
 
-                                {item.status == "pending" && <td className="text-yellow-500 p-3 text-center">Pending</td>}
-                                {item.status == "success" && <td className="text-green-500 p-3 text-center">Approve</td>}
+                                <td className="text-green-500 p-3 text-center">{item.status}</td>
 
                                 <td className="dropdown text-center py-2">
                                     <label tabIndex={0} className="cursor-pointer"><img src={triangle} alt="action" /></label>
