@@ -4,7 +4,6 @@ import { useMutation, useQuery } from "react-query";
 
 import { API } from "../config/api";
 import Swal from "sweetalert2";
-import { useNavigate } from "react-router-dom";
 
 export default function AdminEditFilm() {
   const navigate = useNavigate();
