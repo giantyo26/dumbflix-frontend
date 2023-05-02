@@ -91,7 +91,7 @@ export default function FilmsDetail() {
           <div className="detail-page bg-black flex ">
             <div className="w-full">
               <div className="flex justify-end">
-                { state.user.role === "admin" && (
+                { state.user.roles == "admin" && (
                 <div className="">
                   <label
                     htmlFor="my-modal-3"
@@ -170,7 +170,7 @@ export default function FilmsDetail() {
                               {films?.title} : {item.title}
                             </p>
                           </div>
-                          {state.user.role === "admin" && (
+                          {state.user.roles == "admin" && (
                             <div className="Update Delete">
                               <label
                                 htmlFor="my-modal-1"
