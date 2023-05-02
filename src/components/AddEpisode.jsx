@@ -3,8 +3,10 @@ import { useMutation } from "react-query";
 
 import { API } from "../config/api";
 import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 
 const AddEpisode = ({ idFilm }) => {
+  const navigate = useNavigate()
   const [formEpisode, setFormEpisode] = useState({
     title: "",
     thumbnail: "",
@@ -52,7 +54,7 @@ const AddEpisode = ({ idFilm }) => {
         "success"
       ).then((result) => {
         if (result.isConfirmed) {
-          window.location.reload();
+          navigate("/admin-list-film");
         }
       });
     } catch (err) {
