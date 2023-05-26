@@ -2,23 +2,15 @@ import {React,  useState}  from "react";
 import { useMutation } from "react-query";
 import { API } from "../config/api";
 import Swal from "sweetalert2";
-import Login from "./Login";
-
 export default function Register() {
     // UseState for showing register Modal
     const [showRegister, setShowRegister] = useState(false);
-     // UseState for showing login Modal
-    const [showLogin, setShowLogin] = useState(false);
     const handleRegisterModal = (event) => {
         if (event.target.id === "register-background") {
             setShowRegister(false);
         }
     };
-    // To show login modal
-    const handleLoginClick = (event) => {
-        setShowRegister(false);
-        setShowLogin(true);
-    };
+
     // UseState for register input
     const [registerValue, setRegisterValue] = useState({
         email: "",
@@ -158,13 +150,16 @@ export default function Register() {
                                 </button>
                             </div>
                             <p className="mx-auto">
-                                Already have an account ?<span onClick={handleLoginClick}>Click<a className="font-semibold">{" "}Here</a></span>
+                                Already have an account ?<span>Click</span>{" "}
+                                <a className="font-semibold" href="#">
+                                    {" "}
+                                    Here
+                                </a>
                             </p>
                         </form>
                     </div>
                 </div>
             )}
-            {showLogin && <Login />}
         </>
     );
 }
