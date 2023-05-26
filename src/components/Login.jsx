@@ -4,11 +4,14 @@ import { UserContext } from "../context/UserContext";
 import { useMutation } from "react-query";
 import { useNavigate } from "react-router-dom";
 import Swal from 'sweetalert2'
+import Register from "./Register";
+
 
 
 export default function Login() {
     const [showLogin, setShowLogin] = useState(false);
-    const [_, dispatch] = useContext(UserContext)
+    const [showRegister, setShowRegister] = useState(false);
+    const [_, dispatch] = useContext(UserContext);
 
     const navigate = useNavigate();
     const handleLoginModal = (event) => {
@@ -16,7 +19,11 @@ export default function Login() {
             setShowLogin(false);
         }
     };
-
+     // To show register modal
+    const handleRegisterClick = (event) => {
+        setShowLogin(false);
+        setShowRegister(true);
+    }
     // Login logic
     const [loginValue, setLoginValue] = useState({
         email: "",
@@ -118,16 +125,13 @@ export default function Login() {
                                 Login
                             </button>
                             <p className="text-white">
-                                Don't have an account ? <span>Click</span>
-                                <a className="font-semibold" href="#">
-                                    {" "}
-                                    Here
-                                </a>
+                                Don't have an account ?<span onClick={handleRegisterClick}>Click<a className="font-semibold">{" "}Here</a></span>
                             </p>
                         </form>
                     </div>
                 </div>
             )}
+            {showRegister && <Register />}
         </>
     );
 }
