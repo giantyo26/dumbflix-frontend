@@ -48,7 +48,7 @@ export default function AddListFilm() {
     const categoryFilmsMovies = films?.filter((film) => film.category_id === 2);
 
     return (
-        <div className="movies items-center relative bg-black h-screen backdrop-blur-lg px-10">
+        <div className="movies items-center relative bg-black min-h-screen backdrop-blur-lg px-10">
             <div className="flex gap-3 items-center pt-5">
                 <h1 className="text-2xl">List Film</h1>
                 <select
