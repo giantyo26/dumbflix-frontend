@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { UserContext } from "../context/UserContext.jsx";
+import { useState, useEffect, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 import Profile from "../assets/image/profile.png";
@@ -11,6 +12,7 @@ import AvatarIcon from "../assets/image/joker.png"
 export default function UserAvatar() {
   // Using state to keep track dropdown menu 
   const [showDropdownUser, setShowDropdownUser] = useState(false);
+  const [state] = useContext(UserContext);
 
   const navigate = useNavigate()
   
@@ -22,6 +24,7 @@ export default function UserAvatar() {
 
     navigate("/");
   };
+  
   // JSX for the UserAvatar component
   return (
     <div
@@ -47,7 +50,7 @@ export default function UserAvatar() {
         >
           <Link to={"/user-profile"}>
             <div className="flex ml-4 my-3 items-center">
-              <img src={Profile} />
+              <img src={state.user.thumbnail} />
               <h1>Profile</h1>
             </div>
           </Link>
