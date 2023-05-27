@@ -78,9 +78,9 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="*" element={<PageNotFound />} />
+            <Route path="/series" element={<Series />} />
+            <Route path="/movies" element={<Movies />} />
             <Route element={<PrivateRouteLogin />}>
-              <Route path="/series" element={<Series />} />
-              <Route path="/movies" element={<Movies />} />
               <Route path="/films-detail/:id" element={<FilmsDetail />} />
 
               
