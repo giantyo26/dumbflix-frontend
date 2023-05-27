@@ -16,7 +16,7 @@ export default function Series() {
       <div className="relative">
         <img
           src={LacasaHero}
-          className="object-cover min-w-full h-[600px] bg-darkBlack"
+          className="object-cover min-w-[100%] h-[600px] bg-darkBlack"
           alt="La Casa De Papel Cover"
         />
         <div className="hero-image bg-black">
